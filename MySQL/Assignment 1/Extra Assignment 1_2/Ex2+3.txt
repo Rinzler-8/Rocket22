@@ -1,0 +1,12 @@
+Ex2:
+- ID 			int primary key not null auto_increment,
+- Name 			varchar(150) not null,
+- Code 			varchar(5) not null,
+- ModifiedDate 	datetime
+
+Ex3:
+- ID 			int primary key not null auto_increment,
+- Name 			varchar(150) not null,
+- Birthdate 	date,
+- Gender 		enum(0, 1, "null"),
+- isDeletedFlag	enum(0,1)
