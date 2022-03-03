@@ -1,23 +1,33 @@
+#Account
+INSERT INTO `test_assignment_1`.`account` (`AccountID`, `Email`, `Username`, `Fullname`, `DepartmentID`, `PositionID`, `CreateDate`) VALUES 
+('190', 'mad', 'phuc','magaming',15 ,14 ,'2001-2-20'),
+('191', 'mad1', 'phuc1','magaming1',151 ,141 ,'2001-2-21'),
+('192', 'mad2', 'phuc2','magaming2',152, 151,'2001-2-24'),
+('193', 'mad3', 'phuc3','magaming3',166, 280,'2001-2-26'),
+('194', 'mad4' , 'phuc4','magaming4',170, 214,'2001-2-25');
 
 #Answer 
-INSERT INTO answer (AnswerID, Content, QuestionID, isCorrect) VALUES (1, 'Câu 1', 11, true),
-                                   (2, "Câu 2", 12, false),
-                                   (3, "Câu 3", 13, true),
-                                   (4, "Câu 4", 14, false),
-                                   (5, "Câu 5", 15, true);
+INSERT INTO answer (AnswerID, Content, QuestionID, isCorrect) VALUES 
+(1, 'Câu 1', 11, true),
+(2, "Câu 2", 12, false),
+(3, "Câu 3", 13, true),
+(4, "Câu 4", 14, false),
+(5, "Câu 5", 15, true);
                                                                   
 #CategoryQuestion                                                                     
-INSERT INTO categoryquestion (CategoryID,CategoryName) VALUES    (1, 'Embedded'),
-																 (2, 'Multimedia'),
-																 (3, 'Database'),
-															     (4, 'Software Engineer'),
-																 (5, 'Meaningless');
+INSERT INTO categoryquestion (CategoryID,CategoryName) VALUES    
+(1, 'Embedded'), 
+(2, 'Multimedia'),
+(3, 'Database'),
+(4, 'Software Engineer'),
+(5, 'Meaningless');
 #Department                                                                     
-INSERT INTO department (DepartmentID,DepartmentName) VALUES      (1, 'Technology'),
-																 (2, 'Media'),
-																 (3, 'Healthcare'),
-																 (4, 'Military'),
-																(5, 'Congress');
+INSERT INTO department (DepartmentID,DepartmentName) VALUES     
+ (1, 'Technology'),
+ (2, 'Media'),
+ (3, 'Healthcare'),
+ (4, 'Military'),
+ (5, 'Congress');
  #Exam                                                                            
 INSERT INTO exam (ExamID,Code,Title,CategoryID,Duration,CreateDate) VALUES (1, '190A', "Math", 11, 60, '2022-8-25'),
                                        (2, '190B2', "Literature", 12, 60,  '2022-4-26'),
