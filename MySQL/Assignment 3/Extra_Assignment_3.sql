@@ -13,6 +13,9 @@ INSERT INTO `fresher_management`.`trainee` (`TraineeID`, `Full_Name`, `Birth_Dat
 
 
 #Question 2:
+SELECT * 
+FROM trainee
+GROUP BY month(Birth_Date);
 
 #Question 3:
 SELECT TraineeID, 
@@ -35,4 +38,7 @@ AND ET_English >= 18;
 DELETE FROM trainee 
 WHERE TraineeID = 3;
 
-
+#Question 6
+UPDATE trainee 
+SET Training_Class = "2"
+WHERE TraineeID = 5; 
