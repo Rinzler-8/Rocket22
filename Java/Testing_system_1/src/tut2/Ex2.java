@@ -14,42 +14,42 @@ public class Ex2 {
 		// TODO Auto-generated method stub
 		// Create 3 Positions
 		Position pos1 = new Position();
-		pos1.id = 1;
-		pos1.name = PositionName.Dev;
+		pos1.setId(1);
+		pos1.setName(PositionName.Dev);
 		Position pos2 = new Position();
-		pos2.id = 2;
-		pos2.name = PositionName.PM;
+		pos2.setId(2);
+		pos2.setName(PositionName.PM);
 		Position pos3 = new Position();
-		pos3.id = 3;
-		pos3.name = PositionName.Scrum_Master;
+		pos3.setId(3);
+		pos3.setName(PositionName.Scrum_Master);
 
 		// Create 3 Departments
 		Department dep1 = new Department();
-		dep1.id = 1;
-		dep1.departmentName = "Marketing";
+		dep1.setId(1);
+		dep1.setDepartmentName("Marketing");
 		Department dep2 = new Department();
-		dep2.id = 2;
-		dep2.departmentName = "Sale";
+		dep2.setId(2);
+		dep2.setDepartmentName("Sale");
 		Department dep3 = new Department();
-		dep3.id = 3;
-		dep3.departmentName = "CTO";
+		dep3.setId(3);
+		dep3.setDepartmentName("CTO");
 
 		// Create 3 Groups
 		Group group1 = new Group();
-		group1.groupID = 1;
-		group1.groupName = "Testing System";
+		group1.setGroupID(1);
+		group1.setGroupName("Testing System");
 		Group group2 = new Group();
-		group2.groupID = 2;
-		group2.groupName = "Development";
+		group2.setGroupID(2);
+		group2.setGroupName("Development");
 		Group group3 = new Group();
-		group3.groupID = 3;
-		group3.groupName = "Sale";
+		group3.setGroupID(3);
+		group3.setGroupName("Sale");
 
 		// Create 3 Accounts
-		Account acc1 = new Account();
+		Account acc1 = new Account(0, null, null, null, dep3, pos3, null, null);
 		acc1.id = 1;
 		acc1.email = "daonq1";
-		acc1.username = "daonq1";
+		acc1.userName = "daonq1";
 		acc1.fullName = "Dao Nguyen 1";
 		acc1.accDepartment = dep1;
 		acc1.accPosition = pos1;
@@ -57,20 +57,20 @@ public class Ex2 {
 		Group[] groupAcc1 = { group1, group2 };
 		acc1.Groups = groupAcc1;
 
-		Account acc2 = new Account();
+		Account acc2 = new Account(0, null, null, null, dep3, pos3, null, groupAcc1);
 		acc2.id = 2;
 		acc2.email = "daonq2";
-		acc2.username = "daonq2";
+		acc2.userName = "daonq2";
 		acc2.fullName = "Dao Nguyen 2";
 		acc2.accDepartment = dep2;
 		acc2.accPosition = pos2;
 		acc2.createDate = LocalDate.of(2021, 03, 17);
 		acc2.Groups = new Group[] { group3, group2 };
 
-		Account acc3 = new Account();
+		Account acc3 = new Account(0, null, null, null, dep3, pos3, null, groupAcc1);
 		acc3.id = 3;
 		acc3.email = "daonq3";
-		acc3.username = "daonq3";
+		acc3.userName = "daonq3";
 		acc3.fullName = "Dao Nguyen 3";
 		acc3.accDepartment = dep3;
 		acc3.accPosition = pos3;
@@ -80,7 +80,7 @@ public class Ex2 {
 		if (acc2.accDepartment == null) {
 			System.out.println("This account doesn't have department.");
 		} else {
-			System.out.println("This account's department is: " + acc2.accDepartment.departmentName);
+			System.out.println("This account's department is: " + acc2.accDepartment.getDepartmentName());
 		}
 	}
 }
