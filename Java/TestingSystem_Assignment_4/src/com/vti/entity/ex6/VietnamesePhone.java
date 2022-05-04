@@ -2,9 +2,12 @@ package com.vti.entity.ex6;
 
 import java.util.ArrayList;
 
-public abstract class VietnamesePhone extends Phone{
+public class VietnamesePhone extends Phone{
 	public ArrayList<Contact> contactList;
 	
+	public VietnamesePhone() {
+		contactList = new ArrayList<Contact>();
+	}
 	@Override
 	public void insertContact(String name, int number) {
 		Contact contact = new Contact(name, number);

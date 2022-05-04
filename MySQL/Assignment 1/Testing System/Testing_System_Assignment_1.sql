@@ -1,4 +1,7 @@
 #table 1 
+drop database vti;
+create database vti;
+use vti;
 create table Department (
 	DepartmentID int not null auto_increment,
     DepartmentName varchar(50),
@@ -81,7 +84,7 @@ create table Exam (
     Code varchar(50) not null,
     Title varchar(50)  not null,
     CategoryID int not null,
-    Duration datetime,
+    Duration int,
 	CreateDate timestamp default current_timestamp(),
     Primary key(ExamID)
 );

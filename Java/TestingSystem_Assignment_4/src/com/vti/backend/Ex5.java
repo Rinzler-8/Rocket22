@@ -185,7 +185,7 @@ public class Ex5 {
 	private void delByName() {
 		System.out.println("Enter a name to delete: ");
 		String delName = sc.next();
-		canBoList.removeIf(CanBo.getName().equals(delName));
+//		canBoList.removeIf(CanBo.getName().equals(delName));
 		printListCanBo();
 	}
 	
