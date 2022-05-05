@@ -35,21 +35,8 @@ public class ScannerUtils {
 				System.err.println(errorMessage);
 				System.out.print("Enter your password: ");
 				continue;
-			}
-
-			boolean hasAtLeast1Character = false;
-
-			for (int i = 0; i < password.length(); i++) {
-				if (Character.isUpperCase(password.charAt(i)) == true) {
-					hasAtLeast1Character = true;
-					break;
-				}
-			}
-			if (hasAtLeast1Character == true) {
-				return password;
 			} else {
-				System.err.println(errorMessage);
-				System.out.print("Enter your password again: ");
+				return password;
 			}
 		}
 	}
@@ -89,22 +76,4 @@ public class ScannerUtils {
 		}
 	}
 
-	public static String inputName(String errorMessage) {
-		while (true) {
-
-			String name = ScannerUtils.inputString(errorMessage);
-
-			String[] words = name.split(" ");
-			name = "";
-			for (String word : words) {
-
-				String firstCharacter = word.substring(0, 1).toUpperCase();
-				String leftCharacter = word.substring(1).toLowerCase();
-				word = firstCharacter + leftCharacter;
-				name += word + " ";
-			}
-
-			return name.trim();
-		}
-	}
 }

@@ -28,10 +28,10 @@ INSERT INTO `User`  (FullName,				Email,						`Password`,			ExpInYear ,			ProSki
 VALUES		                                                                                                     
 					(N'Jackson Bridge',	  	'Bridge123@gmail.com', 		'Bridging123',		null		,		'dev'	, 		1245	,	'Employee'		),
 					(N'Duy Pham',			'duy0321@gmail.com', 		'agsdwweq'	,		5			,	    'sql'	,		1245	,	'Manager'	),
-                    (N'Kano',				'K213@gmail.com', 			'onmyway12412',		7			,		'test'	,		52489	,	'Manager'	),
+                    (N'Kano',				'K213@gmail.com', 			'Onmyway12412',		7			,		'test'	,		52489	,	'Manager'	),
                     (N'Johnny Cage',		'Johnnyyy88@gmail.com', 	'letsgooo'	,		null		,		'java' ,		52489	,	'Employee'	),
                     (N'21 savage',			'21ForLife@gmail.com', 		'alotftjcole',		8			,		'java' , 		1245  	,	'Manager'	),
-                    (N'Lil Wave',			'23ForLife@gmail.com', 		'alotftjcole',		8			,		'sql' , 		1245  	,	'Employee'	);
+                    (N'Lil Wave',			'23ForLife@gmail.com', 		'alotftjcole',		null		,		'sql'  , 		1245 	,	'Employee'	);
                     
                     
                     

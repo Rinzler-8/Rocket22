@@ -26,8 +26,4 @@ public class UserController {
 		return userService.login(email, password);
 	}
 
-	public boolean full_name(String email) throws ClassNotFoundException, SQLException {
-		return userService.full_name(email);
-	}
-
 }

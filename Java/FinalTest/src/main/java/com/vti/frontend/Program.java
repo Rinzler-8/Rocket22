@@ -2,12 +2,12 @@ package com.vti.frontend;
 
 import java.sql.SQLException;
 
+import com.vti.entity.Role;
 import com.vti.entity.User;
 import com.vti.utils.JDBCUtils;
 import com.vti.utils.ScannerUtils;
 
 public class Program {
-	
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		menuLogin();
@@ -17,16 +17,26 @@ public class Program {
 		Function function = new Function();
 
 		System.out.println("LOGIN");
-		function.login();
+		User user = function.login();
 
-		menu();
+		if (user.getRole() == Role.MANAGER) {
+			menuManager();
+		} else {
+			menuUser();
+		}
+	}
+
+	// Bridge123@gmail.com K213@gmail.com
+	// Bridging123 onmyway12412
+	// 1245
+	private static void menuUser() throws ClassNotFoundException, SQLException {
+
+		System.err.println("You cannot view user list as employee");
+		menuLogin();
 
 	}
 
-	// Bridge123@gmail.com
-	// Bridging123 
-	// 1245
-	private static void menu() throws ClassNotFoundException, SQLException {
+	private static void menuManager() throws ClassNotFoundException, SQLException {
 		Function function = new Function();
 
 		System.out.println("Enter an option:\n" + "1: Get manager list\n" + "2: Get employee list \n" + "3: Exit");

@@ -20,10 +20,10 @@ public class Function {
 	public void getListManagers() throws ClassNotFoundException, SQLException {
 
 		List<User> users = userController.getListManager();
-		System.out.printf("%-15s %-25s %-25s %-25s %-25s\n", "ID", "Email", "FullName", "Role", "expInYear");
+		System.out.printf("%-15s %-25s %-25s %-25s %-25s\n", "ID", "Email", "FullName", "Role", "ExpInYear");
 		for (User user : users) {
-			System.out.printf("%-15s %-25s %-25s %-25s %-25s\n", user.getId(), user.getEmail(),
-					user.getFullName(), ((Manager) user).getRole(), ((Manager) user).getExpInYear());
+			System.out.printf("%-15s %-25s %-25s %-25s %-25s\n", user.getId(), user.getEmail(), user.getFullName(),
+					((Manager) user).getRole(), ((Manager) user).getExpInYear());
 		}
 
 	}
@@ -31,7 +31,7 @@ public class Function {
 	public void getListEmployee() throws ClassNotFoundException, SQLException {
 
 		System.out.print("Enter project ID: ");
-		int projectId = ScannerUtils.inputPositiveInt("Invalid! Try again");
+		int projectId = ScannerUtils.inputPositiveInt("Only positive int allowed! Try again");
 
 		List<User> users2 = userController.getListEmployee(projectId);
 
@@ -54,7 +54,7 @@ public class Function {
 			User user = userController.login(email, password);
 
 			if (user != null) {
-				System.out.printf("Welcome %s \n \n \n", user.getFullName());
+				System.out.printf("Welcome %s - %s\n\n\n", user.getFullName(), user.getRole());
 				return user;
 			} else {
 				System.err.println("Invalid email/password! Please enter again!");

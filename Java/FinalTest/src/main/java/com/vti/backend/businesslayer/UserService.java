@@ -25,8 +25,4 @@ public class UserService {
 		return userRepository.login(email, password);
 	}
 
-	public boolean full_name(String email) throws ClassNotFoundException, SQLException {
-		return userRepository.full_name(email);
-	}
-
 }

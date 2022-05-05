@@ -26,7 +26,7 @@ CREATE TABLE `User`(
 INSERT INTO `User`  (FullName, 				Email,				 		`Password`,			ExpInYear		,		ProSkill	,	`Role`			) 
 VALUES		                                                                                                     
 					(N'Nguyễn Thị Mỵ',		'mynt2407@gmail.com', 		'Mynguyen123',			null		,		'dev'		,	'Employee'		),
-					(N'Nguyễn Ngọc Duy',		'duynn03@gmail.com', 	'duyNguyen',			5			,		5			,	'Admin'			),
+					(N'Nguyễn Ngọc Duy',	'duynn03@gmail.com', 		'duyNguyen',			5			,		'sql'			,	'Admin'			),
                     (N'Nguyễn Hùng Mạnh',	'hungmanh@gmail.com', 		'hunGmanh1',			null		,		'test'		,	'Employee'		),
                     (N'Tống Thị Nhung',		'nhung@gmail.com', 			'nhungtOng',			null		,		'java'		,	'Employee'		),
                     (N'Trần Thị Kim Anh',	'kimoanh.tran@gmail.com', 	'tran.kim',				null		,		'java'		,	'Employee'		);
