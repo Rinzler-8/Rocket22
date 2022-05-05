@@ -13,7 +13,7 @@ public class JDBCUtils {
 		if (connection == null || connection.isClosed()) {
 			String url = "jdbc:mysql://localhost:3306/finaltest?autoReconnect=true&useSSL=false&characterEncoding=latin1";
 			String username = "root";
-			String password = "root";
+			String password = "O$carmike1801";
 
 			// Step 1* register the driver class with DriverManager
 			Class.forName("com.mysql.cj.jdbc.Driver");
